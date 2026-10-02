@@ -98,24 +98,10 @@ img {
   padding-block: 28px;
 }
 .brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 11px;
-  font-size: 20px;
+  display: inline-block;
+  font-size: 25px;
   font-weight: 650;
-  letter-spacing: -0.5px;
-}
-.brand-mark {
-  display: grid;
-  place-items: center;
-  width: 36px;
-  height: 36px;
-  background: var(--blue);
-  color: white;
-  border-radius: 11px 11px 11px 3px;
-  font-size: 28px;
-  font-weight: 700;
-  transform: rotate(-7deg);
+  letter-spacing: -0.8px;
 }
 .site-footer a:hover {
   color: var(--blue);
@@ -153,69 +139,43 @@ h1 {
   padding-top: 0;
 }
 .project-preview {
-  position: relative;
   display: block;
-  height: 355px;
-  padding: 26px 26px 0;
-  background: var(--project-color);
-  border-radius: 17px;
+  border-radius: 6px;
   overflow: hidden;
-}
-.preview-window {
-  overflow: hidden;
-  border-radius: 8px 8px 0 0;
-  box-shadow: 0 8px 24px -14px #24262e55;
-  transition: transform 0.25s ease;
 }
 .preview-window img {
   aspect-ratio: 1.5;
   object-fit: cover;
 }
-.project-preview:hover .preview-window {
-  transform: translateY(-4px);
-}
-.project-chagall .preview-window {
-  width: 94%;
-  transform: rotate(-4deg);
-  margin-left: -6px;
-}
-.project-chagall .project-preview:hover .preview-window {
-  transform: translateY(-4px) rotate(-4deg);
-}
+.preview-window,
 .companion-window {
-  position: absolute;
-  right: -8px;
-  bottom: -8px;
-  width: 58%;
-  border: 3px solid white;
-  border-radius: 8px;
-  overflow: hidden;
-  transform: rotate(5deg);
+  display: block;
 }
-.preview-open {
-  position: absolute;
-  top: 16px;
-  right: 16px;
+.preview-window:focus-visible,
+.companion-window:focus-visible {
+  outline-offset: -3px;
+}
+.project-chagall .project-preview {
   display: grid;
-  place-items: center;
-  width: 34px;
-  height: 34px;
-  background: #fff;
-  border-radius: 50%;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  align-items: center;
+  border-radius: 0;
 }
-.preview-open .icon {
-  width: 19px;
-  height: 19px;
+.project-chagall .preview-window,
+.companion-window {
+  border-radius: 6px;
+  overflow: hidden;
 }
 .project-content {
   min-width: 0;
 }
-h2 {
+.project-description {
   margin: 0;
-  font-size: clamp(30px, 3vw, 40px);
-  font-weight: 600;
-  line-height: 1.12;
-  letter-spacing: -0.045em;
+  font-size: clamp(22px, 2.1vw, 27px);
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.025em;
 }
 .project-links {
   display: flex;
@@ -268,10 +228,6 @@ h2 {
     gap: 40px;
     padding-block: 42px;
   }
-  .project-preview {
-    height: 285px;
-    padding: 22px 22px 0;
-  }
   .project-link {
     font-size: 13px;
   }
@@ -282,12 +238,6 @@ h2 {
   }
   .brand {
     font-size: 18px;
-  }
-  .brand-mark {
-    width: 32px;
-    height: 32px;
-    font-size: 25px;
-    border-radius: 10px 10px 10px 3px;
   }
   .hero {
     padding-block: 40px 48px;
@@ -300,14 +250,8 @@ h2 {
     gap: 22px;
     padding-block: 34px;
   }
-  .project-preview {
-    height: auto;
-    aspect-ratio: 1.55;
-    padding: 22px 22px 0;
-    border-radius: 13px;
-  }
-  h2 {
-    font-size: 29px;
+  .project-description {
+    font-size: 22px;
   }
   .project-links {
     gap: 10px;
@@ -315,12 +259,6 @@ h2 {
   }
   .project-link {
     font-size: 14px;
-  }
-  .preview-open {
-    top: 12px;
-    right: 12px;
-    width: 31px;
-    height: 31px;
   }
   .collection {
     padding-bottom: 35px;
@@ -333,11 +271,8 @@ h2 {
   h1 {
     font-size: 32px;
   }
-  .project-preview {
-    padding: 16px 16px 0;
-  }
-  h2 {
-    font-size: 27px;
+  .project-description {
+    font-size: 20px;
   }
   .project-link {
     font-size: 13px;
