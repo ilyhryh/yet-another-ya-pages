@@ -107,15 +107,17 @@ img {
   color: var(--blue);
 }
 .hero {
-  padding-block: 65px 78px;
+  padding-block: 44px 60px;
   text-align: center;
 }
 h1 {
-  margin: 0;
-  font-size: clamp(52px, 6.3vw, 84px);
-  line-height: 1.06;
-  letter-spacing: -0.055em;
-  font-weight: 600;
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: clamp(28px, 3.7vw, 48px);
+  line-height: 1.16;
+  letter-spacing: -0.04em;
+  font-weight: 500;
+  text-wrap: balance;
 }
 .collection {
   padding-bottom: 60px;
@@ -221,7 +223,7 @@ h1 {
 }
 @media (max-width: 1000px) {
   .hero {
-    padding-block: 50px 62px;
+    padding-block: 32px 46px;
   }
   .project-card {
     grid-template-columns: 1.15fr 1fr;
@@ -240,10 +242,7 @@ h1 {
     font-size: 18px;
   }
   .hero {
-    padding-block: 40px 48px;
-  }
-  h1 {
-    font-size: clamp(34px, 8.7vw, 58px);
+    padding-block: 24px 38px;
   }
   .project-card {
     grid-template-columns: 1fr;
@@ -268,9 +267,6 @@ h1 {
   }
 }
 @media (max-width: 380px) {
-  h1 {
-    font-size: 32px;
-  }
   .project-description {
     font-size: 20px;
   }
