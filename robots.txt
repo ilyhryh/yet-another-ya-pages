@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ilyhryh.github.io/yet-another-ya-pages/sitemap.xml
