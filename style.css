@@ -20,7 +20,7 @@
 :root {
   --ink: #24262e;
   --muted: #606574;
-  --blue: #3158ed;
+  --accent: #3f5f51;
   --line: #e7e9ee;
   --gutter: clamp(22px, 5vw, 72px);
 }
@@ -44,12 +44,12 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 a:focus-visible {
-  outline: 3px solid var(--blue);
+  outline: 3px solid var(--accent);
   outline-offset: 6px;
 }
 ::selection {
-  background: #d3ddff;
-  color: #1a2c6c;
+  background: #e1e8e3;
+  color: #223e31;
 }
 img {
   display: block;
@@ -83,7 +83,7 @@ img {
   padding: 12px 16px;
   transform: translateY(-200%);
   z-index: 10;
-  background: var(--blue);
+  background: var(--accent);
   color: #fff;
   border-radius: 8px;
 }
@@ -99,12 +99,13 @@ img {
 }
 .brand {
   display: inline-block;
+  font-family: "Lucida Console", "Courier New", monospace;
   font-size: 25px;
-  font-weight: 650;
+  font-weight: 700;
   letter-spacing: -0.8px;
 }
 .site-footer a:hover {
-  color: var(--blue);
+  color: var(--accent);
 }
 .hero {
   padding-block: 44px 60px;
@@ -190,7 +191,7 @@ h1 {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  color: #244bd7;
+  color: var(--accent);
   font-size: 15px;
   line-height: 1.5;
 }
