@@ -117,22 +117,6 @@ img {
   font-weight: 700;
   transform: rotate(-7deg);
 }
-.site-header nav {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  font-size: 13px;
-}
-.site-header nav a {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-}
-.site-header nav .icon {
-  width: 16px;
-  height: 16px;
-}
-.site-header nav a:hover,
 .site-footer a:hover {
   color: var(--blue);
 }
@@ -266,16 +250,6 @@ h2 {
   color: var(--muted);
   font-size: 12px;
 }
-.footer-author,
-.footer-links {
-  display: flex;
-  align-items: center;
-  gap: 26px;
-}
-.footer-author > span {
-  font-weight: 600;
-  color: var(--ink);
-}
 .site-footer a {
   display: inline-flex;
   align-items: center;
@@ -315,10 +289,6 @@ h2 {
     font-size: 25px;
     border-radius: 10px 10px 10px 3px;
   }
-  .site-header nav {
-    font-size: 12px;
-    gap: 18px;
-  }
   .hero {
     padding-block: 40px 48px;
   }
@@ -356,23 +326,12 @@ h2 {
     padding-bottom: 35px;
   }
   .site-footer {
-    flex-wrap: wrap;
-    row-gap: 24px;
     padding-block: 24px 30px;
-  }
-  .footer-author,
-  .footer-links {
-    width: 100%;
-    justify-content: space-between;
-    gap: 18px;
   }
 }
 @media (max-width: 380px) {
   h1 {
     font-size: 32px;
-  }
-  .site-header nav a[href="#projects"] {
-    display: none;
   }
   .project-preview {
     padding: 16px 16px 0;
@@ -394,4 +353,9 @@ h2 {
     transition: none !important;
     animation: none !important;
   }
+}
+
+.site-footer > span {
+  font-weight: 600;
+  color: var(--ink);
 }
